@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>arndt-software – Projekte von Andre Arndt</title>
+<meta name="description" content="Kleine, selbst gebaute und selbst gehostete Software-Projekte: GeoQuest, ArcDoc und mehr.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arndt-software.de/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arndt-software.de/">
+<meta property="og:title" content="arndt-software – Projekte von Andre Arndt">
+<meta property="og:description" content="Kleine, selbst gebaute und selbst gehostete Software-Projekte.">
+<meta property="og:locale" content="de_DE">
+<style>
+  :root{
+    --bg:#0d1117; --bg2:#111821; --card:#161d27; --card-hover:#1b2430;
+    --text:#e8edf2; --muted:#9aa7b4; --line:#232c38;
+    --accent:#4f8cff;
+    --geo:#2ec27e; --arc:#c08a4e; --bio:#38c7c7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:radial-gradient(1200px 600px at 50% -200px,#18324f 0%,var(--bg) 55%) no-repeat,var(--bg);
+    color:var(--text);line-height:1.6;min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+
+  header{text-align:center;padding:90px 20px 40px}
+  .logo{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px;
+    letter-spacing:.5px;color:var(--muted);text-transform:uppercase}
+  .logo .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 14px var(--accent)}
+  h1{font-size:clamp(2.2rem,6vw,3.6rem);font-weight:800;letter-spacing:-1px;margin:22px 0 14px}
+  h1 span{color:var(--accent)}
+  .sub{color:var(--muted);font-size:clamp(1rem,2.5vw,1.2rem);max-width:620px;margin:0 auto}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;padding:30px 0 20px}
+  .card{
+    position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:28px;display:flex;flex-direction:column;transition:.2s ease;overflow:hidden;
+  }
+  .card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--c,#4f8cff)}
+  .card:hover{transform:translateY(-4px);background:var(--card-hover);border-color:#2f3b4a}
+  .card.soon{opacity:.72}
+  .ico{font-size:34px;line-height:1;margin-bottom:16px}
+  .card h2{font-size:1.35rem;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+  .badge{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;
+    padding:3px 9px;border-radius:999px;background:#233042;color:var(--muted)}
+  .badge.live{background:rgba(46,194,126,.15);color:var(--geo)}
+  .card p{color:var(--muted);font-size:.97rem;flex:1;margin-bottom:18px}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px}
+  .tag{font-size:12px;color:var(--muted);background:#1f2833;border:1px solid var(--line);
+    padding:3px 10px;border-radius:8px}
+  .btn{display:inline-flex;align-items:center;gap:8px;justify-content:center;
+    background:var(--c,#4f8cff);color:#fff;font-weight:600;font-size:.95rem;text-decoration:none;
+    padding:11px 18px;border-radius:11px;transition:.15s;align-self:flex-start}
+  .btn:hover{filter:brightness(1.1)}
+  .btn.disabled{background:#2a3542;color:var(--muted);cursor:default;pointer-events:none}
+  .btn .arr{transition:.15s}
+  .btn:hover .arr{transform:translateX(3px)}
+
+  footer{text-align:center;color:var(--muted);font-size:.9rem;padding:50px 20px 40px;
+    border-top:1px solid var(--line);margin-top:40px}
+  footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+  footer a:hover{color:var(--text)}
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo"><span class="dot"></span> arndt-software</div>
+    <h1>Kleine Projekte,<br><span>selbst gebaut & gehostet.</span></h1>
+    <p class="sub">Eine Sammlung eigener Software-Projekte – von Geografie-Quiz bis
+    Grabungsdokumentation. Alle auf einer eigenen Plattform, ohne fremde Clouds.</p>
+  </header>
+
+  <main class="wrap">
+    <section class="grid">
+
+      <article class="card" style="--c:var(--geo)">
+        <div class="ico">🌍</div>
+        <h2>GeoQuest <span class="badge live">Online</span></h2>
+        <p>Die große kostenlose Geografie-Quiz-App: über 1000 Spielmodi in 30 Kategorien –
+        Länder, Flaggen, Hauptstädte, Tiere und mehr. Komplett offline spielbar.</p>
+        <div class="tags"><span class="tag">Quiz</span><span class="tag">PWA</span><span class="tag">Offline</span><span class="tag">kostenlos</span></div>
+        <a class="btn" style="--c:var(--geo)" href="https://geoquest.arndt-software.de">GeoQuest öffnen <span class="arr">→</span></a>
+      </article>
+
+      <article class="card" style="--c:var(--arc)">
+        <div class="ico">🏺</div>
+        <h2>ArcDoc <span class="badge live">Online</span></h2>
+        <p>Digitale Funddokumentation für archäologische Grabungen – Funde erfassen,
+        strukturieren und auswerten. Entstanden im Rahmen der FIRST LEGO League.</p>
+        <div class="tags"><span class="tag">Archäologie</span><span class="tag">PWA</span><span class="tag">Dokumentation</span></div>
+        <a class="btn" style="--c:var(--arc)" href="https://arcdoc.arndt-software.de">ArcDoc öffnen <span class="arr">→</span></a>
+      </article>
+
+      <article class="card soon" style="--c:var(--bio)">
+        <div class="ico">✨</div>
+        <h2>Bioglow <span class="badge">in Arbeit</span></h2>
+        <p>Forschungsprojekt der FIRST LEGO League 2026/27.
+        Kommt demnächst auf die Plattform.</p>
+        <div class="tags"><span class="tag">FLL 2026/27</span><span class="tag">Forschung</span><span class="tag">bald</span></div>
+        <span class="btn disabled">Demnächst verfügbar</span>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Andre Arndt · arndt-software.de ·
+    Kontakt: <a href="mailto:kontakt@arndt-software.de">kontakt@arndt-software.de</a>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
